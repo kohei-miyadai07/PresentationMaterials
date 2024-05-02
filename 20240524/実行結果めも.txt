@@ -1,0 +1,26 @@
+y_mrok@ctrl:~/code/exam4$ ansible-playbook -i hosts.yml install_apache.yml 
+
+PLAY [Install Apache.] *********************************************************
+
+TASK [Install the httpd package.] **********************************************
+changed: [takeyamachi]
+
+TASK [Install the firewalld package.] ******************************************
+ok: [takeyamachi]
+
+TASK [Start "firewalld.service".] **********************************************
+changed: [takeyamachi]
+
+RUNNING HANDLER [Change the listening port.] ***********************************
+changed: [takeyamachi]
+
+RUNNING HANDLER [Start "httpd.service".] ***************************************
+changed: [takeyamachi]
+
+RUNNING HANDLER [Drill a hole for the http port.] ******************************
+changed: [takeyamachi]
+
+PLAY RECAP *********************************************************************
+takeyamachi                : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+y_mrok@ctrl:~/code/exam4$ 
